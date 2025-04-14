@@ -50,7 +50,7 @@ npm start
 #### Créer un pays
 
 ```graphql
-mutation {
+mutation CreateCountry {
   createCountry(code: "FR", name: "France", emoji: "🇫🇷", continent: "Europe") {
     code
     name
@@ -65,8 +65,8 @@ mutation {
 #### Récupérer tous les pays
 
 ```graphql
-query {
-  countries {
+query GetCountries {
+  getCountries {
     code
     name
     emoji
@@ -78,8 +78,8 @@ query {
 #### Récupérer un pays par son code
 
 ```graphql
-query {
-  country(code: "FR") {
+query GetCountry {
+  getCountry(code: "FR") {
     code
     name
     emoji
@@ -91,8 +91,8 @@ query {
 #### Récupérer les pays par continent
 
 ```graphql
-query {
-  countriesByContinent(continent: "Europe") {
+query GetCountriesByContinent{
+  getCountriesByContinent(continent: "Europe") {
     code
     name
     emoji
